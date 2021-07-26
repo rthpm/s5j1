@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <title>Créer un potin</title>
+  </head>
+  <body>
+    <h1><a href="/">Mon super site de gossip !</a></h1>
+    <h2>Crée un potin !</h2>
+    <p>Balance ton potin via le formulaire ci-dessous</p>
+    <form action='/gossips/new/' method='POST'>
+      Saisi ici ton nom :  <input type='text' name='gossip_author'/><br/>
+      Balance ton potin : <br/><textarea style='font-family: sans-serif' cols="80" rows="5" name='gossip_content'/></textarea><br/>
+      <input type='submit'/>
+    </form>
+  </body>
+</html>

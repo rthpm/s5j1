@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <title>Créer un potin</title>
+  </head>
+  <body>
+    <h1><a href="/">Mon super site de gossip !</a></h1>
+    <h2>Éditer le potin numéro <%= params['id'] %></h2>
+    <form action='/gossips/<%= params['id'] %>/edit' method='POST'>
+      Nom :  <input type='text' name='gossip_author' value='<%= gossip.author %>'/><br/>
+      Potin : <br/><textarea style='font-family: sans-serif' cols="80" rows="5" name='gossip_content'/> <%= gossip.content %></textarea><br/>
+      
+      <input type='submit'/>
+    </form>
+  </body>
+</html>

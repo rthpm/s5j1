@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>The Gossip Project</title>
+  </head>
+  <body>
+    <h1><a href="/">Mon super site de gossip !</a></h1>
+    <h2>Potin numéro <%= params['id'] %></h2>
+    <dl>
+      <dt><%= gossip.author %>
+        <dd><%= gossip.content %>
+    </dl>
+    <a href="/gossips/<%= id %>/edit">Éditer</a>
+    <h2>Commentaires</h2>
+    <form action='/gossips/<%= params['id'] %>' method='POST'>
+      Ajouter un commentaire<br/>
+      Nom :  <input type='text' name='comment_author'/><br/>
+      Commentaire : <br/>
+      <textarea style='font-family: sans-serif' name='comment_content' cols="80" rows="10"/></textarea><br/>
+      <input type='submit'/>
+    </form>
+      <% comment.each_with_index do |comment, id| %>
+      <p><b><%= comment.author %>:</b> <%= comment.content %></p>
+      <% end %>
+  </body>
+</html>
